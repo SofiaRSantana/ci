@@ -8,11 +8,9 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-        uses: actions/checkout@v3
-      - name: Instalar html5validator
-        run: pip install html5validator
+      - uses: actions/checkout@v3
       - name: Validar HTML
-        run: html5validator --root ./
+        uses: Cyb3r-Jak3/html5validator-action@0.4.4
   
   deploy:
     runs-on: ubuntu-latest
